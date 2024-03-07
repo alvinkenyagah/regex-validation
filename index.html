@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="content">
-        <h2>REGEX TESTER</h2>
+        <h2>validator</h2>
     <form>
         <input type="tel" id="phone" placeholder="format +123123456789" required>
         <input type="submit">
@@ -26,32 +26,6 @@
     </div>
 </body>
 
-<script>
-
-let form = document.querySelector('form')
-
-form.addEventListener('submit', (e)=>{
-
-e.preventDefault()
-
-
-let phone = document.getElementById('phone').value
-let info = document.createElement('h1')
-
-const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/
-
-if(regex.test(phone)===false){
-    info.innerText = 'Enter the correct phone number fomart!'
-    infocon.append(info)
-}else{
-    info.innerText= `Your phone number is ${phone}.`
-    infocon.append(info)
-}
-
-form.reset()
-
-})
-
-</script>
+<script src="./script.js"></script>
 
 </html>
